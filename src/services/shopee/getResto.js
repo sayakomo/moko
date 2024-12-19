@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { parseCoordinates } from './helpers/parseCoordinates';
-import { buildRequestData } from './helpers/buildRequestData';
+import { parseCoordinates } from './helpers/parseCoordinates.js';
+import { buildRequestData } from './helpers/buildRequestData.js';
 
 export const getResto = async (tikor) => {
     const api = "https://foody.shopee.co.id/api/buyer/listing-detail";
