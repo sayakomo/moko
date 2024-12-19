@@ -44,7 +44,7 @@ const createRequestData = (latitude, longitude) => ({
 });
 
 export const getResto = async (tikor) => {
-    const [longitude, latitude] = tikor.split(',').map(Number);
+    const [latitude, longitude] = tikor.split(',').map(Number);
     const requestData = createRequestData(latitude, longitude);
 
     try {
