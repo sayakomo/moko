@@ -5,7 +5,7 @@ import { buildRequestData } from './helpers/buildRequestData.js';
 export const getResto = async (tikor) => {
     const api = "https://foody.shopee.co.id/api/buyer/listing-detail";
     const headers = {
-        "User-Agent": "Mozilla/5.0 (Linux; Android 13; SM-G998B Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/114.0.5735.60 Mobile Safari/537.36"
+        "User-Agent": "Mozilla/5.0 (Linux; Android 13; Mi A1 Build/TQ3A.230705.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/114.0.5735.196 Mobile Safari/537.36"
     };
 
     try {
