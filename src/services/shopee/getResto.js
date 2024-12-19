@@ -53,8 +53,9 @@ export const getResto = async (tikor) => {
 
     try {
         const response = await axios.request(config);
-        console.log(response.data);
+        return response.data;
     } catch (error) {
         console.error('Error fetching restaurant data:', error);
+        throw error;
     }
 };
