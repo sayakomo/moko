@@ -1,5 +1,5 @@
 export const buildRequestData = (latitude, longitude) => {
-    const rawData = {
+    return {
         longitude,
         latitude,
         page_num: 1,
@@ -27,5 +27,4 @@ export const buildRequestData = (latitude, longitude) => {
         is_first_entry: true,
         business_type: 1
     };
-    return JSON.parse(rawData);
 };
