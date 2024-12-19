@@ -13,7 +13,7 @@ export const getResto = async (tikor) => {
         const data = buildRequestData(latitude, longitude);
         const rawData = JSON.parse(data);
         const response = await axios.post(api, rawData, { headers });
-        return response.data;
+        return response;
     } catch (error) {
         console.error("Error fetching restaurant data:", error.message);
         return {
