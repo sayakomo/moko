@@ -34,7 +34,7 @@ const handleServiceRequest = async ({ Type, Search, Versi, Device, Tikor, Keywor
 
 export const komo = async (req, res) => {
     try {
-        return res.status(400).json({
+        return res.status(401).json({
             error: true,
             message: 'regist dulu bang'
         });

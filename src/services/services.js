@@ -1,12 +1,12 @@
 import { isExpired } from '../middlewares/auth.js';
-import { getResto } from './shopee/request.js';
+import { getResto } from './shopee/getResto.js';
 
 export const Shopee = async (device, tikor) => {
     try {
-        const activate = await isExpired(device);
+        const isActive = await isExpired(device);
         
-        if (!activate) {
-            return { status: 401, message: 'USER expired' }
+        if (!isActive) {
+            return { status: 401, message: 'regist dulu bang' }
         }
         
         return getResto(tikor);
