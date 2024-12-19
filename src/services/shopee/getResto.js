@@ -18,7 +18,7 @@ export const getResto = async (tikor) => {
         console.error("Error fetching restaurant data:", error.message);
         return {
             error: true,
-            message: error.message
+            message: error
         };
     }
 };
