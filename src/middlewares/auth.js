@@ -1,4 +1,4 @@
-import Users from "../models/users.js";
+import Moko from "../models/users.js";
 
 const createUserResponse = (version, user, userType, isExpired) => ({
     ID: version,
@@ -15,7 +15,7 @@ const determineUserType = (user) => user.admin ? 'VIP' : 'Trial';
 
 export const auth = async (version, device) => {
     try {
-        const user = await Users.findOne({ user: device });
+        const user = await Moko.findOne({ user: device });
 
         if (!user) {
             return { error: "Regist dulu bang" };
@@ -37,7 +37,7 @@ export const auth = async (version, device) => {
 
 export const isExpired = async (device) => {
     try {
-        const user = await Users.findOne({ user: device });
+        const user = await Moko.findOne({ user: device });
         if (!user) {
             return { error: "Regist dulu bang" };
         }

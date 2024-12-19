@@ -20,4 +20,4 @@ const UserSchema = new mongoose.Schema({
     }
 });
 
-export default mongoose.model('moko', UserSchema);
+export default mongoose.model('Moko', UserSchema);
