@@ -6,14 +6,14 @@ import { parseCoordinates } from './helpers/parseCoordinates.js';
 export const getResto = async (tikor) => {
     const userAgent = new UserAgent({ deviceCategory: "mobile" });
     try {
-        const url = 'https://api.tikor.com/v1/restaurants';
+        const url = "https://foody.shopee.co.id/api/buyer/listing-detail";
         const headers = {
             'User-Agent': userAgent.toString(),
             'Content-Type': 'application/json'
         };
         const { latitude, longitude } = parseCoordinates(tikor);
         const data = buildRequestData(latitude, longitude);
-        const response = await axios.get(url, data, { headers });
+        const response = await axios.post(url, data, { headers });
         return response.data;
     } catch (error) {
         console.error(error);
