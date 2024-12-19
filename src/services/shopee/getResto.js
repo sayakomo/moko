@@ -2,15 +2,13 @@ import axios from 'axios';
 
 export const getResto = async (tikor) => {
     const [latitude, longitude] = tikor.split(',').map(coord => parseFloat(coord.trim()));
-
     try {
         const url = "https://foody.shopee.co.id/api/buyer/listing-detail";
         const headers = {
             "Content-Type": "application/json",
             "User-Agent": "Mozilla/5.0 (Linux; Android 11; Mi A1 Build/TQ3A.230705.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/114.0.5735.196 Mobile Safari/537.36"
         };
-
-        const data = JSON.stringify({
+        const data = {
             "longitude": longitude,
             "latitude": latitude,
             "page_num": 1,
@@ -45,10 +43,9 @@ export const getResto = async (tikor) => {
             ],
             "is_first_entry": true,
             "business_type": 1
-        });
+        };
         const response = await axios.post(url, data, { headers });
-        const resto = response.data;
-        return resto;
+        return response.data;
     } catch (error) {
         console.error(error);
         throw error;
