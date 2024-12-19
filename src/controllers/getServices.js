@@ -24,7 +24,7 @@ export const getServices = async (req, res) => {
 
 const handleServiceRequest = async ({ Type, Search, Versi, Device, Tikor, Keyword }) => {
     if (Type) {
-        return await getTypeServices(Versi, Device, Tikor);
+        return await getTypeServices(Type, Versi, Device, Tikor);
     } 
     if (Search) {
         return await getSearchServices(Search, Device, Tikor, Keyword);

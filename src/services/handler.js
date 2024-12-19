@@ -1,7 +1,7 @@
 import { auth } from '../middlewares/auth.js';
 import { Shopee, ShopeeFood, Gofood } from './services.js';
 
-export const getTypeServices = async (versi, device, tikor) => {
+export const getTypeServices = async (type, versi, device, tikor) => {
     switch (type) {
         case 'moko':
             return await auth(versi, device);
