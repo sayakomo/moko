@@ -18,7 +18,7 @@ export const buildRequestData = (latitude, longitude) => {
         collection_publish_id: "",
         content_id: "83785",
         source: 2,
-        algo_property: "{\"circle_id\":\"90116\",\"display_name\":\"Sekitarmu\",\"city_id\":101380696896948,\"location\":0,\"PageType\":\"foody_home\",\"PageSection\":\"\",\"TargetType\":\"home_circle\"}",
+        algo_property: '{"circle_id":"90116","display_name":"Sekitarmu","city_id":101380696896948,"location":0,"PageType":"foody_home","PageSection":"","TargetType":"home_circle"}',
         listing_type: 1,
         from_source: "",
         sub_content_ids: null,
