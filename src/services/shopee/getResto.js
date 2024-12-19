@@ -1,8 +1,7 @@
 import axios from 'axios';
 
-// Function to get restaurant details based on location
 export const getResto = async (tikor) => {
-    const [latitude, longitude] = tikor.split(',');
+    const [latitude, longitude] = tikor.split(',').map(coord => parseFloat(coord.trim()));
 
     const requestData = {
         longitude,
@@ -53,9 +52,8 @@ export const getResto = async (tikor) => {
 
     try {
         const response = await axios.request(config);
-        return response.data;
+        console.log(response.data);
     } catch (error) {
         console.error('Error fetching restaurant data:', error);
-        throw error;
     }
 };
