@@ -15,10 +15,10 @@ export const getResto = async (tikor) => {
         const response = await axios.post(api, rawData, { headers });
         return response;
     } catch (error) {
-        console.error("Error fetching restaurant data:", error.message);
+        //console.error("Error fetching restaurant data:", error.message);
         return {
             error: true,
-            message: error
+            message: error.message
         };
     }
 };
