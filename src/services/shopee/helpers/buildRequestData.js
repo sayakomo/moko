@@ -1,5 +1,5 @@
 export const buildRequestData = (latitude, longitude) => {
-    const data = {
+    const data = JSON.stringify({
         "longitude": longitude,
         "latitude": latitude,
         "page_num": 1,
@@ -26,6 +26,6 @@ export const buildRequestData = (latitude, longitude) => {
         "quick_filter_ids": ["16", "12", "15", "11", "19"],
         "is_first_entry": true,
         "business_type": 1
-    };
+    });
     return data;
 };
