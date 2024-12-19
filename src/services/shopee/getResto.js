@@ -3,7 +3,7 @@ import UserAgent from 'user-agents';
 import { buildRequestData } from './helpers/buildRequestData.js';
 import { parseCoordinates } from './helpers/parseCoordinates.js';
 
-const getResto = async (tikor) => {
+export const getResto = async (tikor) => {
     const userAgent = new UserAgent({ deviceCategory: "mobile" });
     try {
         const url = "https://foody.shopee.co.id/api/buyer/listing-detail";
@@ -25,5 +25,3 @@ const getResto = async (tikor) => {
         }
     }
 };
-
-getResto("-6.327988,106.8652313");
