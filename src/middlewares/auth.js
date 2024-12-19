@@ -44,9 +44,9 @@ export const isExpired = async (device) => {
 
         const expired = isUserExpired(user.expired);
         if (expired) {
-            return { error: "Kamu sudah expired" };
             user.status = false;
             await user.save();
+            return { error: "Kamu sudah expired" };
         }
 
         return { message: expired ? false : true };
