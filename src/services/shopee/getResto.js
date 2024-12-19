@@ -6,7 +6,7 @@ const HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Linux; Android 11; Mi A1 Build/TQ3A.230705.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/114.0.5735.196 Mobile Safari/537.36'
 };
 
-const createRequestData = (longitude, latitude) => ({
+const createRequestData = (latitude, longitude) => ({
     longitude,
     latitude,
     page_num: 1,
@@ -45,7 +45,7 @@ const createRequestData = (longitude, latitude) => ({
 
 export const getResto = async (tikor) => {
     const [longitude, latitude] = tikor.split(',').map(Number);
-    const requestData = createRequestData(longitude, latitude);
+    const requestData = createRequestData(latitude, longitude);
 
     try {
         const response = await axios.post(API_URL, requestData, { headers: HEADERS });
