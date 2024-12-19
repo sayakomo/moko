@@ -3,7 +3,7 @@ import UserAgent from 'user-agents';
 import { buildRequestData } from './helpers/buildRequestData.js';
 import { parseCoordinates } from './helpers/parseCoordinates.js';
 
-export const getResto = async (tikor) => {
+const getResto = async (tikor) => {
     const userAgent = new UserAgent({ deviceCategory: "mobile" });
     try {
         const url = "https://foody.shopee.co.id/api/buyer/listing-detail";
@@ -13,8 +13,10 @@ export const getResto = async (tikor) => {
         };
         const { latitude, longitude } = parseCoordinates(tikor);
         const data = buildRequestData(latitude, longitude);
+        
         const response = await axios.post(url, data, { headers });
-        return response.data;
+        
+        console.log(response.data);
     } catch (error) {
         console.error(error);
         return {
@@ -23,3 +25,5 @@ export const getResto = async (tikor) => {
         }
     }
 };
+
+getResto("-6.327988,106.8652313");
