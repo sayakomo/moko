@@ -5,7 +5,7 @@ export const Shopee = async (device, tikor) => {
     try {
         const expired = await isExpired(device);
         
-        if (expired) {
+        if (!expired) {
             return { status: 401, message: 'USER expired' }
         }
 
